@@ -9,5 +9,23 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ *= require grid_960
+ *= require vw
  */
+
+body {
+  background: #eee;
+}
+
+div.wrapper {
+  background: #fff !important;
+}
+
+#canvas {
+  height: 260px;
+  border: solid 1px #ddd;
+}
+
+#form {
+
+}

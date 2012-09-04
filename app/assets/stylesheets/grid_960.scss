@@ -1,0 +1,18 @@
+// Example File Demonstrating the use of _960.gs partial
+
+// Define your 960gs variables
+// This function must be declared before importing partials/960
+// These are the values for the default 960px layout
+// ------------------------------------------------------------
+@function grid_vars($var) {
+	@if ( $var == "container_width" ) { @return 960px; }
+	@else if ($var == "col_count") { @return 16; } 
+	@else if ($var == "col_gutter") { @return 20px; }
+}
+
+// This gives access to the 960 grid mixin
+@import "partials/960";
+
+.container {
+	@include grid_system();
+}

@@ -1,0 +1,138 @@
+// SASS adaptation of 960 GS
+
+// IMPORTANT: This adaption does not use Global Variables and thus requires that in the file you are importing these mixins into, you must first declare a function called grid_vars in which you define all your parameters. This allows us pass different starting variables to the mixins here and generate different layouts for different device sizes.
+
+$separator:"-";
+$container_width : grid_vars("container_width");
+$col_count       : grid_vars("col_count");
+$col_gutter 	 : grid_vars("col_gutter");
+$col_width 	 : ( $container_width / $col_count ) - $col_gutter;
+
+// The width of a column including the margin. 
+$col_outer_width: $col_width + $col_gutter;
+
+@mixin grid_container( $width: $container_width ) {
+ 	width: $width;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+
+// computes the inner width of the grid of size $n columns
+@mixin grid_width( $n, $cols: $col_count, $gutter: $col_gutter ) {
+	width: $container_width / $cols * $n - $gutter;
+}
+
+// sets base styles for a single grid unit / column
+@mixin grid_unit_base( $gutter: $col_gutter ) {
+	display: inline; 
+	float: left;
+	position: relative;
+
+	margin-left: $gutter / 2;
+	margin-right: $gutter / 2;
+}
+
+// computes the width of the grid of $n columns
+@mixin grid( $n, $cols: $col_count, $gutter: $col_gutter ){
+	@include grid_unit_base( $gutter );
+	@include grid_width( $n, $cols, $gutter );
+}
+
+@mixin alpha { margin-left: 0; }
+@mixin omega { margin-right: 0; }
+
+@mixin grids( $cols: $col_count, $gutter: $col_gutter ) {
+	
+	// create our .grid_1, .grid_2, etc classes
+	#{enumerate(".grid", 1, $cols, $separator)} {
+		@include grid_unit_base( $gutter );	
+	}
+
+	@for $n from 1 through $cols {
+		.grid#{$separator}#{$n} {
+			@include grid_width( $n, $cols, $gutter );
+		}
+	}
+}
+
+
+
+// Prefix: Extra Leadgin Space
+@mixin prefix( $n ) {
+	padding-right: 0px;
+	padding-left: $col_width * $n;
+}
+
+@mixin prefixes( $cols: $col_count ) {
+	@for $n from 1 through $cols - 1 {
+		.prefix#{$separator}#{$n} {
+			@include prefix( $n );
+		}
+	}
+}
+
+
+// Suffix: Extra Trailing Space
+@mixin suffix( $n ){
+	padding-left: 0px;
+	padding-right: $col_width * $n;
+}
+
+@mixin suffixes( $cols: $col_count ) { 
+	@for $n from 1 through $cols - 1 {
+		.suffix#{$separator}#{$n} {
+			@include suffix( $n );
+		}
+	}
+}
+
+// Push: moves a column 'n' columns to the left.
+@mixin push($n) {
+	position: relative;
+	left: $col_outer_width * $n;
+}
+
+// Pull: moves a column 'n' columns to the right.
+@mixin pull($n) {
+	position: relative;
+	left: $col_outer_width * -$n;  
+}
+
+// Creates all the .push_1, .pull_1, etc classes
+@mixin grid_movements( $cols: $col_count ) {
+	#{enumerate(".push", 1, $cols - 1, $separator)},
+  	#{enumerate(".pull", 1, $cols - 1, $separator)} {
+  		position: relative;
+  	}
+
+  	@for $n from 1 through $cols - 1 {
+  		.push#{$separator}#{$n} {
+  			@include push( $n )
+  		}
+  		.pull#{$separator}#{$n} {
+  			@include pull( $n )
+  		}		
+  	}
+}
+
+// Builds our whole grid
+@mixin grid_system ( $cols: $col_count ) {
+	@include grid_container( $container_width );
+	@include grids( $cols );
+	@include prefixes( $cols );
+	@include suffixes( $cols );
+	@include grid_movements( $cols );
+
+	.alpha {
+		@include alpha();
+	}
+
+	.omega {
+		@include omega();
+	}
+}
+
+
+body {
+	min-width: $container_width;
+}
