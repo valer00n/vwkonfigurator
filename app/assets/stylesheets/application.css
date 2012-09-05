@@ -21,9 +21,8 @@ div.wrapper {
   background: #fff !important;
 }
 
-#canvas {
+.canvas {
   height: 260px;
-  border: solid 1px #ddd;
 }
 
 #form {
