@@ -1,3 +1,3 @@
-Vwkonfigurator.CarlinesView = Ember.View.extend({
+App.CarlinesView = Ember.View.extend({
   templateName: 'carlines'
 });

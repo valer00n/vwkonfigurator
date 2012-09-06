@@ -1,3 +1,7 @@
+//setup a namespace
+
+window.App = App = Ember.Application.create();
+
 //= require ./store
 //= require_tree ./models
 //= require_tree ./controllers

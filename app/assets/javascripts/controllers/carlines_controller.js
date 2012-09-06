@@ -1,3 +1,3 @@
-Vwkonfigurator.CarlinesController = Ember.ArrayController.extend({
+App.CarlinesController = Ember.ArrayController.extend({
 
 });
