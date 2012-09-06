@@ -4,7 +4,7 @@
 
 <div class="clearfix"></div>
 
-<div id="canvas" class="grid_16">
+<div id="canvas">
   <%= render 'display_canvas' %>
 </div>
 
@@ -16,5 +16,5 @@
 </div>
 
 <div id="form" class="grid_16">
-  <%= render 'dashboard_canvas' %>
+  <%= render 'dashboard_canvas', :carlines => @carlines %>
 </div>
