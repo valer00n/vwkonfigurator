@@ -12,6 +12,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem "ember-rails"
 
 gem 'mongoid'
 gem 'mongo_ext'
