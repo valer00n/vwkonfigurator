@@ -1,0 +1,27 @@
+<h1>Listing carlines</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @carlines.each do |carline| %>
+  <tr>
+    <td><%= carline.title %></td>
+    <td><%= carline.description %></td>
+    <td><%= carline.price %></td>
+    <td><%= link_to 'Show', carline %></td>
+    <td><%= link_to 'Edit', edit_carline_path(carline) %></td>
+    <td><%= link_to 'Destroy', carline, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Carline', new_carline_path %>

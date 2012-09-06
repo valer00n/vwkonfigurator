@@ -8,3 +8,5 @@
 //= require_self
 
 Vwkonfigurator.initialize();
+
+App = Ember.Application.create();
