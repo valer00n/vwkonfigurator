@@ -1,6 +1,8 @@
 <% @carlines.each do |carline| %>
   <div class="grid_4">
-    <%= link_to carline.title, carline %>
+    <p class="carline-chooser-cell">
+      <%= link_to carline.title, carline %>
+    </p>
     <!-- <%= carline.description %> -->
     <!-- <%= carline.price %> -->
   </div>

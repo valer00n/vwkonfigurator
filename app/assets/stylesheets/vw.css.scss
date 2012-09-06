@@ -16,9 +16,15 @@ html, body, frameset, frame, table {
     padding: 0;
     vertical-align: top;
 }
+
+a, a:active, a:hover {
+    color: #2274AC;    
+}
+
 a img {
     border: 1px none #FFFFFF;
 }
+
 a:visited {
     text-decoration: none;
 }

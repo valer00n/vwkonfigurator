@@ -5,12 +5,37 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
 </head>
 <body>
+
+<header class="container_16">
+  <div class="grid_2">
+    <img src="/assets/logo_new.jpg">
+  </div>
+
+  <div class="grid_14">
+
+  </div>
+</header>
 
 <div class="container_16">
   <%= yield %>
 </div>
+
+<footer class="container_16">
+  <div class="grid_8">
+    *) Die in dieser Darstellung gezeigten Fahrzeuge können in einzelnen Details vom aktuellen deutschen Lieferprogramm abweichen. Abgebildet sind teilweise Sonderausstattungen gegen Mehrpreis.
+  </div>
+  <div class="grid_8">
+        © Volkswagen 2012 | Impressum | Rechtliches | Volkswagen International | Volkswagen AG | Volkswagen auf Facebook  | Volkswagen auf YouTube  | Volkswagen Karriere
+  </div>
+
+</footer>
 
 </body>
 </html>

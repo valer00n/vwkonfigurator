@@ -12,7 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require ember
+//= //require ember
+// version ember in ember-rails too old ((
+//= require ember-static
+//= require handlebar-static
 //= require app
 
 $(document).ready(function(){
