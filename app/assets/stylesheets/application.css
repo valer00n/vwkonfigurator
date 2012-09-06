@@ -14,7 +14,11 @@
  */
 
 div.container_16 {
-    background: #fff url("/assets/16_col.gif") repeat-y;
+    
+}
+
+div.lined {
+  background: #fff url("/assets/16_col.gif") repeat-y;
 }
 
 body {
@@ -25,15 +29,18 @@ div.wrapper {
   background: #fff !important;
 }
 
-#canvas, #navbar, #form {
-  /*margin: 0 -10px;*/
-  margin-bottom: 2em;
+#header h2{
+  margin: 0;
+}
+
+#header, #canvas, #navbar, #form {
+  margin-top: 2em;
+  display: block;
 }
 
 #canvas {
   height: 260px;
   background: #eee;
-  padding: 1em 0;
   background: left center no-repeat url("http://cc5.volkswagen.de/cc5/images/de-4.0/default_media_stage.jpg");
 }
 

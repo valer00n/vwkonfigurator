@@ -1,20 +1,25 @@
-<div class="grid_16">
+<div id="header" class="grid_16">
   <h2>Konfigurator</h2>
+  <button id="debug_button">debug</button>
 </div>
 
 <div class="clearfix"></div>
 
-<div id="canvas">
+<div id="canvas" class="grid_block">
   <%= render 'display_canvas' %>
 </div>
 
-<div id="navbar" class="grid_16">
-  <div class="grid_4 omega prefix_12">
-    <button>« Cancel</button>
-    <button>Select »</button>
+<div class="clearfix"></div>
+
+<div id="navbar" class="grid_block">
+  <div class="grid_4 prefix_12">
+    <button id="button_back">« Back</button>
+    <button id="button_forward"> Forward »</button>
   </div>
 </div>
 
-<div id="form" class="grid_16">
+<div class="clearfix"></div>
+
+<div id="form" class="grid_block">
   <%= render 'dashboard_canvas', :carlines => @carlines %>
 </div>

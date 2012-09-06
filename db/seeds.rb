@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -6,10 +7,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# coding: utf-8
-
-
-#rake db:setup does not work :( bad encoding
 Carline.create(description:  'Maximaler Raum auf minimaler Fläche: Der up! überrascht als vollwertiger Viersitzer mit einem in seiner Klasse ungewöhnlichen Platzangebot. Intelligente Detail-Lösungen und das klar gestaltete Interieur überzeugen ebenso wie die kompromisslose Sicherheit eines Großen.', price:  '9850', title:  'Der neue up!')
 Carline.create(description:  'Sie sind ein echter Individualist, mit eigenen Vorstellungen und einer Meinung, für die Sie sich auch einsetzen? Dann ist der Polo der richtige Begleiter für Sie! Markant, kraftvoll und auffallend eigenständig im Design bezieht er ganz klar Stellung: Ihre.', price:  '12450', title:  'Der Polo')
 Carline.create(description:  'Der Golf ist nicht nur der leiseste, den es je gab. Er ist auch der hochwertigste Golf aller Zeiten. Mit seinem durch klare Linen geprägten, sportlichen Design, dem überzeugenden Innenraumkonzept und seinen innovativen Motorisierungen legt er einen fulminanten Start hin.', price:  '16975', title:  'Der Golf')

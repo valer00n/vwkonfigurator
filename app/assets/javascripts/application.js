@@ -15,3 +15,8 @@
 //= require ember
 //= require app
 
+$(document).ready(function(){
+  $("#debug_button").click(function(){
+    $(".container_16").toggleClass('lined');
+  });
+});
