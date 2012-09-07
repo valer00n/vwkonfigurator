@@ -1,4 +1,4 @@
-App.Carline = Ember.Resource.extend({
+App.Carline = DS.Model.extend({
 
   resourceUrl: '/contacts',
   resourceName:       'contact',
