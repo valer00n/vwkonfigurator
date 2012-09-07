@@ -32,31 +32,49 @@ div.wrapper {
 
 h1, h2, h3, h4 {
   font-family: vag_rounded_std_thinbold, Arial;
-  margin: 0;
+  /*margin: 0;*/
 }
 
-#header, #canvas, #navbar, #form {
-  margin-top: 1em;
+h1, h2 {
+  font-weight: bold;
+}
+
+ul.nav {
   display: block;
+  float: left;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  list-style: none outside none;
+  line-height: 78px;
+}
+
+ul.nav li{
+  margin-right: 1em;
+  float: left;
+}
+
+
+#main {
+  width: 962px;
+  border: solid 1px #CCCCD1;
+  margin: 0 auto;
+}
+
+#header, #canvas, #navbar, #form, #footer {
+  display: block;
+  padding: 1em 0;
 }
 
 #canvas {
   height: 260px;
-  background: #eee;
-  background: left center no-repeat url("http://cc5.volkswagen.de/cc5/images/de-4.0/default_media_stage.jpg");
-  border-left: solid 1px #CCCCD1;
-  border-top: solid 1px #CCCCD1;
-  border-right: solid 1px #CCCCD1;
-  margin: -1px;
+  background: #CCCCD1;
+  background: left 10px center no-repeat url("http://cc5.volkswagen.de/cc5/images/de-4.0/default_media_stage.jpg");
 }
 
 
 #form {
-  margin: 1em 0;
-  border-left: solid 1px #CCCCD1;
-  border-bottom: solid 1px #CCCCD1;
-  border-right: solid 1px #CCCCD1;
-  margin: -1px;
   height: 300px;
 }
 
@@ -65,15 +83,15 @@ h1, h2, h3, h4 {
 }
 
 #navbar {
-  border-left: solid 1px #CCCCD1;
-  border-right: solid 1px #CCCCD1;
-  margin: 0 -1px;
-  height: 19px;
 }
 
 #navbar button {
   width: 100%;
-  background: url();
+  /*background: url();*/
+}
+
+#navbar button[disabled]{
+
 }
 
 li {

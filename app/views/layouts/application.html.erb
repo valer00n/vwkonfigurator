@@ -13,21 +13,26 @@
 </head>
 <body>
 
-<div class="container_16">
-  <div class="grid_2">
-    <img src="/assets/logo_new.jpg">
+<div id="header" class="container_16">
+  <div class="grid_4">
+    <a href="/"><img src="/assets/logo_new.jpg"></a>
   </div>
 
-  <div class="grid_14">
-
+  <div class="grid_12">
+    <ul class="nav">
+      <li><%= link_to "Carlines", carlines_path %></li>
+      <li><%= link_to "Carlines", carlines_path %></li>
+      <li><%= link_to "Carlines", carlines_path %></li>
+      <li><%= link_to "Carlines", carlines_path %></li>
+    </ul>
   </div>
 </div>
 
-<div class="container_16">
-  <%= yield %>
+<div id="main">
+<%= yield %>
 </div>
 
-<div class="container_16">
+<div id="footer" class="container_16">
   <div class="grid_8">
     *) Die in dieser Darstellung gezeigten Fahrzeuge können in einzelnen Details vom aktuellen deutschen Lieferprogramm abweichen. Abgebildet sind teilweise Sonderausstattungen gegen Mehrpreis.
   </div>

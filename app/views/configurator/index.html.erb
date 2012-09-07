@@ -1,32 +1,26 @@
-<div id="header">
+<div class="container_16">
   <div class="grid_14">
-    <h2>Konfigurator</h2>
+    <h1>Konfigurator &nbsp;&nbsp;&nbsp;<button id="debug_button">debug mode</button></h1>
   </div>
   <div class="grid_2">
-    <button id="debug_button">debug</button>
+    
   </div>
 </div>
 
-<div class="clearfix"></div>
-
-<div id="canvas" class="grid_block">
+<div id="canvas" class="container_16">
   <%= render 'display_canvas' %>
 </div>
 
-<div class="clearfix"></div>
-
-<div id="navbar" class="grid_block">
+<div id="navbar" class="container_16">
   <div class="grid_2 prefix_12">
-    <button id="button_back">« Back</button>
+    <button id="button_back" disabled="disabled">« prew</button>
   </div>
   <div class="grid_2">
-    <button id="button_forward"> Forward »</button>
+    <button id="button_forward"> next »</button>
   </div>
 </div>
 
-<div class="clearfix"></div>
-
-<div id="form" class="grid_block">
+<div id="form" class="container_16">
   <div class="grid_16">
     <h4>Wählen Sie ein Modell aus der Liste aller Fahrzeuge aus.</h4>
   </div>
