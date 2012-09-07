@@ -67,9 +67,12 @@ ul.nav li{
   padding: 1em 0;
 }
 
+#canvas-wrapper {
+  background: #CCCCD1;
+}
+
 #canvas {
   height: 260px;
-  background: #CCCCD1;
   background: left 10px center no-repeat url("http://cc5.volkswagen.de/cc5/images/de-4.0/default_media_stage.jpg");
 }
 
@@ -79,7 +82,7 @@ ul.nav li{
 }
 
 .carline-chooser-cell {
-  margin: 1em 0;
+  margin-bottom: 1em;
 }
 
 #navbar {

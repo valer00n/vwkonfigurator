@@ -7,3 +7,15 @@
     <!-- <%= carline.price %> -->
   </div>
 <% end %>
+
+<div class="grid_16">
+  <script type="text/x-handlebars">
+    {{ view App.CarlinesView }}
+  </script>
+
+  <script type="text/javascript">
+    $(function() {
+      App.CarlinesController.loadAll(<%= @carlines.to_json.html_safe %>);
+    });
+  </script>
+</div>

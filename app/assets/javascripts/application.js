@@ -12,11 +12,18 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= //require ember
-// version ember in ember-rails too old ((
-//= require ember-static
 //= require handlebar-static
+//= require ember-static
+//= require ember-data
 //= require app
+//= require ./store
+//= require_tree ./models
+//= require_tree ./controllers
+//= require_tree ./views
+//= require_tree ./helpers
+//= require_tree ./templates
+//= require_tree ./routes
+//= require_self
 
 $(document).ready(function(){
   $("#debug_button").click(function(){

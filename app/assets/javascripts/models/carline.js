@@ -1,5 +1,11 @@
-App.Carline = DS.Model.extend({
-  title: DS.attr(''),
+App.Carline = Ember.Resource.extend({
+
+  resourceUrl: '/contacts',
+  resourceName:       'contact',
+  resourceProperties: ['title', 'description','price'],
+
+  title: DS.attr('string'),
   description: DS.attr('string'),
-  price: DS.attr('float')
+  price: DS.attr('number')
+
 });
