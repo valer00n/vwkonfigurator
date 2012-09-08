@@ -1,0 +1,29 @@
+<%= form_for(@car_trim) do |f| %>
+  <% if @car_trim.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@car_trim.errors.count, "error") %> prohibited this car_trim from being saved:</h2>
+
+      <ul>
+      <% @car_trim.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

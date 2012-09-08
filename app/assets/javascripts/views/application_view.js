@@ -1,3 +1,3 @@
-App.ApplicationView = Ember.View.extend({
+Vwkonfigurator.ApplicationView = Ember.View.extend({
   templateName: 'application'
 });

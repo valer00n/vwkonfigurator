@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @car_trim.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @car_trim.description %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @car_trim.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_car_trim_path(@car_trim) %> |
+<%= link_to 'Back', car_trims_path %>

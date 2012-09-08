@@ -1,6 +1,6 @@
 class ConfiguratorController < ApplicationController
   def index
-    @carlines = Carline.all
+    @carmodels = CarModel.all
 
   end
 end

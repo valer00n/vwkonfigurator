@@ -1,4 +1,4 @@
-App.UrlBuilder = {
+Vwkonfigurator.UrlBuilder = {
   build: function(carline){
 
   }

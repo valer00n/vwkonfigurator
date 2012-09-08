@@ -1,21 +1,21 @@
-<% @carlines.each do |carline| %>
+<% @carmodels.each do |carmodel| %>
   <div class="grid_4">
     <p class="carline-chooser-cell">
-      <%= link_to carline.title, carline %>
+      <%= link_to carmodel.name, carmodel %>
     </p>
-    <!-- <%= carline.description %> -->
-    <!-- <%= carline.price %> -->
+    <!-- <%= carmodel.description %> -->
+    <!-- <%= carmodel.price %> -->
   </div>
 <% end %>
 
 <div class="grid_16">
   <script type="text/x-handlebars">
-    {{ view App.CarlinesView }}
+    {{ view Vwkonfigurator.CarModelView }}
   </script>
 
   <script type="text/javascript">
     $(document).ready(function() {
-      window.car_models = App.store.findAll(App.Carline);
+      window.car_models = Vwkonfigurator.store.findAll(Vwkonfigurator.CarModel);
     });
   </script>
 </div>

@@ -1,5 +1,9 @@
 Vwkonfigurator::Application.routes.draw do
-  resources :carlines
+  resources :car_groups
+
+  resources :car_trims
+
+  resources :car_models
 
   root :to => "configurator#index"
 

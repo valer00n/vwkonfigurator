@@ -1,3 +1,3 @@
-App.ApplicationController = Ember.Controller.extend({
+Vwkonfigurator.ApplicationController = Ember.Controller.extend({
   
 });

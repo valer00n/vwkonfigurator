@@ -1,4 +1,4 @@
-App.Router = Ember.Router.extend({
+Vwkonfigurator.Router = Ember.Router.extend({
   location: 'hash',
 
   root: Ember.Route.extend({

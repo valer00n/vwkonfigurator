@@ -1,6 +1,6 @@
 //setup a namespace
 
-window.App = Ember.Application.create();
+window.Vwkonfigurator = Ember.Application.create();
 
 $(document).ready(function(){
   $("#debug_button").click(function(){
