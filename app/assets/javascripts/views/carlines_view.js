@@ -1,5 +1,5 @@
 App.CarlinesView = Ember.View.extend({
-  templateName: 'tamplates/carlines',
+  templateName: 'carlines',
   carlinesBinding: 'App.CarlinesController',
 
 });

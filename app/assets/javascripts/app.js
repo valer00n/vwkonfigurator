@@ -1,6 +1,38 @@
 //setup a namespace
 
-window.App = App = Ember.Application.create();
+window.App = Ember.Application.create();
+
+$(document).ready(function(){
+  $("#debug_button").click(function(){
+    $(".container_16").toggleClass('lined');
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
 Ты кто такой давай техзадание,

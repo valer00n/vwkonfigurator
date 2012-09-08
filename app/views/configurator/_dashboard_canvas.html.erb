@@ -14,8 +14,8 @@
   </script>
 
   <script type="text/javascript">
-    $(function() {
-      App.CarlinesController.loadAll(<%= @carlines.to_json.html_safe %>);
+    $(document).ready(function() {
+      window.car_models = App.store.findAll(App.Carline);
     });
   </script>
 </div>

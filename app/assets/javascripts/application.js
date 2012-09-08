@@ -24,9 +24,3 @@
 //= require_tree ./templates
 //= require_tree ./routes
 //= require_self
-
-$(document).ready(function(){
-  $("#debug_button").click(function(){
-    $(".container_16").toggleClass('lined');
-  });
-});
