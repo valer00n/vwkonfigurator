@@ -21,6 +21,7 @@ end
 gem 'mongoid'
 gem 'mongo_ext'
 gem "bson_ext"
+gem 'mongoid_token', '~> 1.1.0'
 
 # attaches
 gem "paperclip"

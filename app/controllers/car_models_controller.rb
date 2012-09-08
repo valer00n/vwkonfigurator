@@ -13,7 +13,7 @@ class CarModelsController < ApplicationController
   # GET /car_models/1
   # GET /car_models/1.json
   def show
-    @car_model = CarModel.find(params[:id])
+    @car_model = CarModel.find_by_token(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -34,7 +34,7 @@ class CarModelsController < ApplicationController
 
   # GET /car_models/1/edit
   def edit
-    @car_model = CarModel.find(params[:id])
+    @car_model = CarModel.find_by_token(params[:id])
   end
 
   # POST /car_models
@@ -56,7 +56,7 @@ class CarModelsController < ApplicationController
   # PUT /car_models/1
   # PUT /car_models/1.json
   def update
-    @car_model = CarModel.find(params[:id])
+    @car_model = CarModel.find_by_token(params[:id])
 
     respond_to do |format|
       if @car_model.update_attributes(params[:car_model])
@@ -72,7 +72,7 @@ class CarModelsController < ApplicationController
   # DELETE /car_models/1
   # DELETE /car_models/1.json
   def destroy
-    @car_model = CarModel.find(params[:id])
+    @car_model = CarModel.find_by_token(params[:id])
     @car_model.destroy
 
     respond_to do |format|

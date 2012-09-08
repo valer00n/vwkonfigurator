@@ -24,3 +24,5 @@
 //= require_tree ./templates
 //= require_tree ./routes
 //= require_self
+
+Vwkonfigurator.carModels = Vwkonfigurator.CarModelsController.create();

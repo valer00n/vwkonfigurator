@@ -34,7 +34,7 @@ class CarGroupsController < ApplicationController
 
   # GET /car_groups/1/edit
   def edit
-    @car_group = CarGroup.find(params[:id])
+    @car_group = CarGroup.find_by_token(params[:id])
   end
 
   # POST /car_groups
@@ -56,7 +56,7 @@ class CarGroupsController < ApplicationController
   # PUT /car_groups/1
   # PUT /car_groups/1.json
   def update
-    @car_group = CarGroup.find(params[:id])
+    @car_group = CarGroup.find_by_token(params[:id])
 
     respond_to do |format|
       if @car_group.update_attributes(params[:car_group])
@@ -72,7 +72,7 @@ class CarGroupsController < ApplicationController
   # DELETE /car_groups/1
   # DELETE /car_groups/1.json
   def destroy
-    @car_group = CarGroup.find(params[:id])
+    @car_group = CarGroup.find_by_token(params[:id])
     @car_group.destroy
 
     respond_to do |format|

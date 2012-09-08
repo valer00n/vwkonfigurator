@@ -13,7 +13,7 @@ class CarTrimsController < ApplicationController
   # GET /car_trims/1
   # GET /car_trims/1.json
   def show
-    @car_trim = CarTrim.find(params[:id])
+    @car_trim = CarTrim.find_by_token(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -34,7 +34,7 @@ class CarTrimsController < ApplicationController
 
   # GET /car_trims/1/edit
   def edit
-    @car_trim = CarTrim.find(params[:id])
+    @car_trim = CarTrim.find_by_token(params[:id])
   end
 
   # POST /car_trims
@@ -56,7 +56,7 @@ class CarTrimsController < ApplicationController
   # PUT /car_trims/1
   # PUT /car_trims/1.json
   def update
-    @car_trim = CarTrim.find(params[:id])
+    @car_trim = CarTrim.find_by_token(params[:id])
 
     respond_to do |format|
       if @car_trim.update_attributes(params[:car_trim])
@@ -72,7 +72,7 @@ class CarTrimsController < ApplicationController
   # DELETE /car_trims/1
   # DELETE /car_trims/1.json
   def destroy
-    @car_trim = CarTrim.find(params[:id])
+    @car_trim = CarTrim.find_by_token(params[:id])
     @car_trim.destroy
 
     respond_to do |format|
