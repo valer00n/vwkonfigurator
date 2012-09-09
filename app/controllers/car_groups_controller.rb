@@ -40,17 +40,20 @@ class CarGroupsController < ApplicationController
   # POST /car_groups
   # POST /car_groups.json
   def create
-    @car_group = CarGroup.new(params[:car_group])
 
-    respond_to do |format|
-      if @car_group.save
-        format.html { redirect_to @car_group, notice: 'Car group was successfully created.' }
-        format.json { render json: @car_group, status: :created, location: @car_group }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @car_group.errors, status: :unprocessable_entity }
-      end
-    end
+    @car_model = CarModel.find_by_token(params[:car_model_id])
+    @car_group = @car_model.car_groups.create!(params[:car_group])
+    redirect_to @car_model, :notice => "Group created"
+
+    # respond_to do |format|
+    #   if @car_group.save
+    #     format.html { redirect_to @car_group, notice: 'Car group was successfully created.' }
+    #     format.json { render json: @car_group, status: :created, location: @car_group }
+    #   else
+    #     format.html { render action: "new" }
+    #     format.json { render json: @car_group.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PUT /car_groups/1

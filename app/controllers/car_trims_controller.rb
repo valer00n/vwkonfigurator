@@ -40,17 +40,20 @@ class CarTrimsController < ApplicationController
   # POST /car_trims
   # POST /car_trims.json
   def create
-    @car_trim = CarTrim.new(params[:car_trim])
+    @car_model = CarModel.find_by_token(params[:car_model_id])
+    @car_group = CarGroup.find_by_token(params[:car_group_id])
+    @car_trim = @car_group.car_trims.create!(params[:car_trim])
+    redirect_to @car_model, :notice => "Trim created"
 
-    respond_to do |format|
-      if @car_trim.save
-        format.html { redirect_to @car_trim, notice: 'Car trim was successfully created.' }
-        format.json { render json: @car_trim, status: :created, location: @car_trim }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @car_trim.errors, status: :unprocessable_entity }
-      end
-    end
+    # respond_to do |format|
+    #   if @car_trim.save
+    #     format.html { redirect_to @car_trim, notice: 'Car trim was successfully created.' }
+    #     format.json { render json: @car_trim, status: :created, location: @car_trim }
+    #   else
+    #     format.html { render action: "new" }
+    #     format.json { render json: @car_trim.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PUT /car_trims/1

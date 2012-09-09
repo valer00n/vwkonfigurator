@@ -1,7 +1,9 @@
-<h1>CarModels</h1>
-
 {{#each Vwkonfigurator.carModels}}
-  {{id}} {{name}}
+  <div class="grid_4">
+  <p class="carline-chooser-cell">
+    <a href="#">#{{url}}</a>
+  </p>
+  </div>
 {{/each}}
 
 {{outlet}}

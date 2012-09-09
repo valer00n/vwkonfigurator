@@ -1,9 +1,8 @@
+<div class="container_16">
+  <div class="grid_16">
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @car_model.name %>
-</p>
+<h1><%= @car_model.name %></h1>
 
 <p>
   <b>Description:</b>
@@ -15,6 +14,24 @@
   <%= @car_model.price %>
 </p>
 
-
 <%= link_to 'Edit', edit_car_model_path(@car_model) %> |
 <%= link_to 'Back', car_models_path %>
+
+<% if @car_model.car_groups.size > 0 %>
+  <ul>
+  <% for car_group in @car_model.car_groups %>
+    <li>
+      <h2><%= car_group.name %></h2>
+        <% if car_group.car_trims.size > 0 %>
+          <ul>
+          <% for car_trim in @car_group.car_trims %>
+            <li><h3><%= car_trim.name %></h3></li>
+          <% end %>
+          </ul>
+        <% end %>
+      </li>
+  <% end %>
+  </ul>
+<% end %>
+</div>
+</div>

@@ -2,13 +2,9 @@
 
 window.Vwkonfigurator = Ember.Application.create();
 
-$(document).ready(function(){
-  $("#debug_button").click(function(){
-    $(".container_16").toggleClass('lined');
-  });
+DS.Model.extend({
+    primaryKey: 'token'
 });
-
-
 
 
 

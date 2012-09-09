@@ -25,4 +25,13 @@
 //= require_tree ./routes
 //= require_self
 
-Vwkonfigurator.carModels = Vwkonfigurator.CarModelsController.create();
+
+$(document).ready(function(){
+  $("#debug_button").click(function(){
+    $(".container_16").toggleClass('lined');
+  });
+});
+
+//application globals
+Vwkonfigurator.carModelsController = Vwkonfigurator.CarModelsController.create();
+Vwkonfigurator.carModels = Vwkonfigurator.store.findAll(Vwkonfigurator.CarModel);
