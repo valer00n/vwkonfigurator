@@ -68,14 +68,17 @@ ul.nav li{
 }
 
 #canvas-wrapper {
-  background: #CCCCD1;
+  /*background: #CCCCD1;*/
 }
 
 #canvas {
   height: 260px;
-  background: left 10px center no-repeat url("http://cc5.volkswagen.de/cc5/images/de-4.0/default_media_stage.jpg");
+  background: left center no-repeat url("/assets/default_media_stage.jpg");
 }
 
+#canvas.clear {
+  background: left center no-repeat url("/assets/linear_media_stage.jpg"); 
+}
 
 #form {
   height: 300px;

@@ -1,3 +1,3 @@
 class CarTrimSerializer < ActiveModel::Serializer
-  attributes :id, :name, :description, :price, :url
+  attributes :_id, :name, :description, :price, :url, :image, :token
 end

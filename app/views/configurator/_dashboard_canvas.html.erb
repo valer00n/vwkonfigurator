@@ -2,3 +2,9 @@
   <h5>Please wait...</h5>
   <img src="/assets/please_wait.gif">
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    Vwkonfigurator.carModels = Vwkonfigurator.store.loadMany(Vwkonfigurator.CarModel, <%= @carmodels.to_a.to_json.html_safe  %>);
+  });
+</script>

@@ -1,3 +1,3 @@
 class CarGroupSerializer < ActiveModel::Serializer
-  attributes :id, :name
+  attributes :_id, :name
 end

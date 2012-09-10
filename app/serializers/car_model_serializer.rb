@@ -1,3 +1,3 @@
 class CarModelSerializer < ActiveModel::Serializer
-  attributes :id, :name, :description, :price, :url
+  attributes :_id, :name, :description, :price, :url, :token
 end

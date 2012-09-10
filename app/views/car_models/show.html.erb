@@ -24,7 +24,7 @@
       <h2><%= car_group.name %></h2>
         <% if car_group.car_trims.size > 0 %>
           <ul>
-          <% for car_trim in @car_group.car_trims %>
+          <% for car_trim in car_group.car_trims %>
             <li><h3><%= car_trim.name %></h3></li>
           <% end %>
           </ul>

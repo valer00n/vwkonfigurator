@@ -4,7 +4,7 @@
 <% @carmodels.each do |carmodel| %>
   <div class="grid_4">
     <p class="carline-chooser-cell">
-      <a href="#<%= carmodel.url %>/<%= carmodel.url %>/<%= carmodel.url %>"><%= carmodel.name %></a>
+      <img src="/assets/arrow_orange.gif"><a class="model-chooser-link" href="#<%= carmodel.url %>" token="<%= carmodel.token %>"><%= carmodel.name %></a>
     </p>
   </div>
 <% end %>

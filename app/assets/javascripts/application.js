@@ -33,11 +33,31 @@ $(document).ready(function(){
 
   $("#form").load('/model');
 
+  $('.model-chooser-link').live('mouseover', function(){
+
+    var token = $(this).attr('token');
+
+    var model = Vwkonfigurator.currentCarModel = Vwkonfigurator.store.find(Vwkonfigurator.CarModel, token);
+    
+    $('#canvas').addClass('clear');
+
+    
+  });
+
 });
 
 //application globals
-Vwkonfigurator.carModelsController = Vwkonfigurator.CarModelsController.create();
-Vwkonfigurator.carModels = Vwkonfigurator.store.findAll(Vwkonfigurator.CarModel);
+Vwkonfigurator.carModelsController = Vwkonfigurator.CarModelsController.create({
+  loadAll: function(data) {
+    this.findAll();
+  },
+
+  findAll: function() {
+    this.set('content', Vwkonfigurator.store.findAll(Vwkonfigurator.CarModel));
+  }
+});
+
+Vwkonfigurator.carModels = Vwkonfigurator.carModelsController.findAll();
 
 Vwkonfigurator.hashLocation = Ember.HashLocation.create({  
 });
@@ -54,7 +74,8 @@ Vwkonfigurator.hashLocation.onUpdateURL(function(url){
     break;
 
     case 1:
-      var car_trim = Vwkonfigurator.currentCarTrim = Vwkonfigurator.store.find(Vwkonfigurator.CarTrim, {'url' : partials[1]});     $('#form').load('/trim' + model.token);
+      var car_trim = Vwkonfigurator.currentCarTrim = Vwkonfigurator.store.find(Vwkonfigurator.CarTrim, {'url' : partials[1]});
+      $('#form').load('/trim' + model.token);
     break;
 
     case 2:
