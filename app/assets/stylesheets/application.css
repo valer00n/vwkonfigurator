@@ -74,10 +74,22 @@ ul.nav li{
 #canvas {
   height: 260px;
   background: left center no-repeat url("/assets/default_media_stage.jpg");
+  position: static;
 }
 
-#canvas.clear {
+#canvas.empty {
   background: left center no-repeat url("/assets/linear_media_stage.jpg"); 
+}
+
+#model-description {
+  font-size: 13px;
+}
+
+
+#model-price {
+  bottom: 22px;
+  font-weight: bold;
+  font-size: 13px;
 }
 
 #form {

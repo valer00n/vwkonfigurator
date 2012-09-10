@@ -39,8 +39,11 @@ $(document).ready(function(){
 
     var model = Vwkonfigurator.currentCarModel = Vwkonfigurator.store.find(Vwkonfigurator.CarModel, token);
     
-    $('#canvas').addClass('clear');
-
+    $('#canvas').addClass('empty');
+    $('#model-image').attr('src', model.get('image'));
+    $('#model-name').html(model.get('name'));
+    $('#model-description').html(model.get('description'));
+    $('#model-price').html(model.get('price'));
     
   });
 
