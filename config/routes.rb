@@ -7,6 +7,13 @@ Vwkonfigurator::Application.routes.draw do
 
   root :to => "configurator#index"
 
+  match 'model' => 'configurator#model'
+  match 'trim/:id_model' => 'configurator#trim'
+  match 'engine/:id_trim' => 'configurator#engine'
+  match 'color/:id_trim' => 'configurator#color'
+  match 'config/:id_trim' => 'configurator#config'
+  match 'total/:id_trim' => 'configurator#total'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

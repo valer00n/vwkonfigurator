@@ -1,0 +1,10 @@
+<div class="grid_16">
+  <h4>Wählen Sie ein Modell aus der Liste aller Fahrzeuge aus.</h4>
+</div>
+<% @carmodels.each do |carmodel| %>
+  <div class="grid_4">
+    <p class="carline-chooser-cell">
+      <a href="#<%= carmodel.url %>/<%= carmodel.url %>/<%= carmodel.url %>"><%= carmodel.name %></a>
+    </p>
+  </div>
+<% end %>
