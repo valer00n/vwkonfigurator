@@ -1,0 +1,13 @@
+<div class="grid_16">
+  <h4>Wählen Sie eine Ausstattungsvariante.</h4>
+</div>
+<% @cargroups.each do |cargroup| %>
+  <div class="grid_4">
+    <h4><%= cargroup.name %></h4> 
+    <% cargroup.car_trims.each do |cartrim| %>
+      <p class="carline-chooser-cell">
+      <img src="/assets/arrow_orange.gif"><a class="trim-chooser-link" href="#<%= @carmodel.url %>/<%= cartrim.url %>" token="<%= cartrim.token %>"><%= cartrim.name %></a>
+    </p>
+    <% end %>        
+  </div>
+<% end %>

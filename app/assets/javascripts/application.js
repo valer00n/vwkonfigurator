@@ -43,9 +43,39 @@ $(document).ready(function(){
     $('#model-image').attr('src', model.get('image'));
     $('#model-name').html(model.get('name'));
     $('#model-description').html(model.get('description'));
-    $('#model-price').html(model.get('price'));
+
+    var price = model.get('price');
+    var price_html = '';
+
+    if  (price > 0){
+      price_html = 'Preis<sup>*</sup> ab ' +  price.toFixed(2);
+    }
+
+    $('#model-price').html(price_html);
     
   });
+
+  $('.trim-chooser-link').live('mouseover', function(){
+
+    var token = $(this).attr('token');
+
+    var model = Vwkonfigurator.currentCarTrim = Vwkonfigurator.store.find(Vwkonfigurator.CarTrim, token);
+    
+    $('#canvas').addClass('empty');
+    $('#model-image').attr('src', model.get('image'));
+    $('#model-name').html(model.get('name'));
+    $('#model-description').html(model.get('description'));
+
+    var price = model.get('price');
+    var price_html = '';
+
+    if  (price > 0){
+      price_html = 'Preis<sup>*</sup> ab ' +  price.toFixed(2);
+    }
+
+    $('#model-price').html(price_html);
+    
+  });  
 
 });
 
@@ -67,33 +97,42 @@ Vwkonfigurator.hashLocation = Ember.HashLocation.create({
 
 Vwkonfigurator.currentCarModel = null;
 Vwkonfigurator.currentCarTrim = null;
+Vwkonfigurator.currentStep = 0;
+
 
 Vwkonfigurator.hashLocation.onUpdateURL(function(url){
   var partials = url.split('/');
-  switch(partials.length) {
+
+  Vwkonfigurator.currentStep = partials.length;
+
+  switch(Vwkonfigurator.currentStep) {
     case 0:
-      var car_model = Vwkonfigurator.currentCarModel = Vwkonfigurator.store.find(Vwkonfigurator.CarModel, {'url' : partials[0]});
-      $('#form').load('/model/' + model.token);
+      $("#form").load('/model');
     break;
 
     case 1:
-      var car_trim = Vwkonfigurator.currentCarTrim = Vwkonfigurator.store.find(Vwkonfigurator.CarTrim, {'url' : partials[1]});
-      $('#form').load('/trim' + model.token);
+      var car_model = Vwkonfigurator.currentCarModel;
+      $('#form').load('/trim/' + car_model.get('token'));
     break;
 
     case 2:
       var car_trim = Vwkonfigurator.currentCarTrim;
-      $('#form').load('/engine');
+      $('#form').load('/engine/' + car_trim.get('token'));
     break;
 
     case 3:
       var car_trim = Vwkonfigurator.currentCarTrim;
-      $('#form').load('/color');
+      $('#form').load('/color/' + car_trim.get('token'));
     break;
 
     case 4:
       var car_trim = Vwkonfigurator.currentCarTrim;
-      $('#form').load('/option');
+      $('#form').load('/option/' + car_trim.get('token'));
+    break;
+
+    case 5:
+      var car_trim = Vwkonfigurator.currentCarTrim;
+      $('#form').load('/total/' + car_trim.get('token'));
     break;
   }
 });

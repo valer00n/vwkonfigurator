@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @car_engine.name %>
+</p>
+
+<p>
+  <b>Power:</b>
+  <%= @car_engine.power %>
+</p>
+
+<p>
+  <b>Transmision:</b>
+  <%= @car_engine.transmision %>
+</p>
+
+<p>
+  <b>Acceleration:</b>
+  <%= @car_engine.acceleration %>
+</p>
+
+<p>
+  <b>Standart:</b>
+  <%= @car_engine.standart %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @car_engine.price %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @car_engine.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_car_engine_path(@car_engine) %> |
+<%= link_to 'Back', car_engines_path %>

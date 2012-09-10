@@ -10,7 +10,8 @@ class ConfiguratorController < ApplicationController
   end
 
   def trim 
-    @cargroups = CarGroup.all
+    @carmodel = CarModel.find_by_token(params[:id_model])
+    @cargroups = @carmodel.car_groups
     render :partial => 'trim'
   end
 

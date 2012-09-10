@@ -26,7 +26,7 @@ class CarModel
 
   # attr_accessible :picture
 
-  embeds_many :car_groups
+  has_many :car_groups # embeds_many :car_groups
   accepts_nested_attributes_for :car_groups
 
   

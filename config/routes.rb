@@ -1,4 +1,6 @@
 Vwkonfigurator::Application.routes.draw do
+  resources :car_engines
+
   resources :car_groups
 
   resources :car_trims

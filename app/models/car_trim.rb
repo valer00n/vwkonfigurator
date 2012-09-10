@@ -17,6 +17,6 @@ class CarTrim
 
 
 
-  embedded_in :car_groups
+  belongs_to :car_group # embedded_in :car_groups
 
 end
