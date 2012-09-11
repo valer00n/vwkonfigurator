@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @car_interior_color.name %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @car_interior_color.image %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @car_interior_color.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_car_interior_color_path(@car_interior_color) %> |
+<%= link_to 'Back', car_interior_colors_path %>

@@ -1,4 +1,10 @@
 Vwkonfigurator::Application.routes.draw do
+  resources :car_options
+
+  resources :car_interior_colors
+
+  resources :car_colors
+
   resources :car_engines
 
   resources :car_groups
@@ -11,6 +17,8 @@ Vwkonfigurator::Application.routes.draw do
 
   match 'model' => 'configurator#model'
   match 'trim/:id_model' => 'configurator#trim'
+  match 'detail/:id_trim' => 'configurator#detail'
+
   match 'engine/:id_trim' => 'configurator#engine'
   match 'color/:id_trim' => 'configurator#color'
   match 'config/:id_trim' => 'configurator#config'

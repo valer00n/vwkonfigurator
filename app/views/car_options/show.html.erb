@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @car_option.name %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @car_option.price %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @car_option.category %>
+</p>
+
+
+<%= link_to 'Edit', edit_car_option_path(@car_option) %> |
+<%= link_to 'Back', car_options_path %>

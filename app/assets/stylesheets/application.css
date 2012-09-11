@@ -88,7 +88,8 @@ ul.nav li{
 
 #model-description {
   font-size: 13px;
-  height: 180px;
+  height: 165px;
+  min-height: 165px;
   overflow: auto;
 }
 

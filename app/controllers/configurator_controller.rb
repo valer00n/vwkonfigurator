@@ -15,8 +15,15 @@ class ConfiguratorController < ApplicationController
     render :partial => 'trim'
   end
 
-  def engine
+  def detail
     @car_engines = CarEngine.all
+    @car_colors = CarColor.all
+    @car_interior_colors = CarInteriorColor.all    
+    @car_options = CarOption.all
+    render :partial => 'detail'
+  end
+
+  def engine
     render :partial => 'engine'
   end
 

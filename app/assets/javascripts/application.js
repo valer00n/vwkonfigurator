@@ -91,7 +91,18 @@ Vwkonfigurator.carModelsController = Vwkonfigurator.CarModelsController.create({
   }
 });
 
+Vwkonfigurator.carTrimsController = Vwkonfigurator.CarTrimsController.create({
+  loadAll: function(data) {
+    this.findAll();
+  },
+
+  findAll: function() {
+    this.set('content', Vwkonfigurator.store.findAll(Vwkonfigurator.CarTrim));
+  }
+});
+
 Vwkonfigurator.carModels = Vwkonfigurator.carModelsController.findAll();
+Vwkonfigurator.carTrims = Vwkonfigurator.carTrimsController.findAll();
 
 Vwkonfigurator.hashLocation = Ember.HashLocation.create({  
 });
@@ -118,22 +129,22 @@ Vwkonfigurator.hashLocation.onUpdateURL(function(url){
 
     case 2:
       var car_trim = Vwkonfigurator.currentCarTrim;
-      $('#form').load('/engine/' + car_trim.get('token'));
+      $('#form').load('/detail/' + car_trim.get('token'));
     break;
 
     case 3:
       var car_trim = Vwkonfigurator.currentCarTrim;
-      $('#form').load('/color/' + car_trim.get('token'));
+      $('#form').load('/detail/' + car_trim.get('token'));
     break;
 
     case 4:
       var car_trim = Vwkonfigurator.currentCarTrim;
-      $('#form').load('/option/' + car_trim.get('token'));
+      $('#form').load('/detail/' + car_trim.get('token'));
     break;
 
     case 5:
       var car_trim = Vwkonfigurator.currentCarTrim;
-      $('#form').load('/total/' + car_trim.get('token'));
+      $('#form').load('/detail/' + car_trim.get('token'));
     break;
   }
 });

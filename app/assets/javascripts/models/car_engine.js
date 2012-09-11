@@ -1,9 +1,9 @@
 Vwkonfigurator.CarEngine = DS.Model.extend({
-  name: DS.attr(''),
-  power: DS.attr(''),
-  transmision: DS.attr(''),
-  acceleration: DS.attr(''),
-  standart: DS.attr(''),
-  price: DS.attr(''),
-  description: DS.attr('')
+  name: DS.attr('string'),
+  power: DS.attr('string'),
+  transmision: DS.attr('string'),
+  acceleration: DS.attr('string'),
+  standart: DS.attr('string'),
+  price: DS.attr('number'),
+  description: DS.attr('string')
 });

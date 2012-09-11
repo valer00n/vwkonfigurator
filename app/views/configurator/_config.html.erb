@@ -1,0 +1,13 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+  </tr>
+
+<% @car_options.each do |car_option| %>
+  <tr>
+    <td><%= car_option.name %></td>
+    <td><%= car_option.price %></td>
+  </tr>
+<% end %>
+</table>

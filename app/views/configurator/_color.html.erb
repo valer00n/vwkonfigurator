@@ -1,0 +1,38 @@
+<div width="45%">
+  <table>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Price</th>
+    </tr>
+
+  <% @car_colors.each do |car_color| %>
+    <tr>
+      <td></td>
+      <td><%= car_color.image %></td>
+      <td><%= car_color.name %></td>
+      <td><%= car_color.price %></td>
+    </tr>
+  <% end %>
+  </table>
+</div>
+
+<div width="45%">
+  <table>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Description</th>
+    </tr>
+
+  <% @car_interior_colors.each do |car_interior_color| %>
+    <tr>
+      <td><%= car_interior_color.name %></td>
+      <td><%= car_interior_color.image %></td>
+      <td><%= car_interior_color.description %></td>
+    </tr>
+  <% end %>
+  </table>
+</div>
