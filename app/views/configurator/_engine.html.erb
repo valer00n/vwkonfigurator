@@ -1,23 +1,30 @@
 <table width="100%">
   <tr>
-    <th>Name</th>
-    <th>Power</th>
-    <th>Transmision</th>
-    <th>Acceleration</th>
-    <th>Standart</th>
-    <th>Price</th>
-    <th></th>
+    <th>Hubraum/Typ</th>
+    <th>Leistung</th>
+    <th>Getriebe</th>
+    <th>Verbrauch**</th>
+    <th>CO2-Emission** / Effizienzklasse**</th>
+    <th>Preis+</th>
+    <th>Details</th>
   </tr>
 
 <% @car_engines.each do |car_engine| %>
   <tr>
-    <td><%= car_engine.name %></td>
+    <td><%= radio_button("car_color", "color", "rails") %> <%= car_engine.name %></td>
     <td><%= car_engine.power %></td>
     <td><%= car_engine.transmision %></td>
     <td><%= car_engine.acceleration %></td>
     <td><%= car_engine.standart %></td>
     <td><%= car_engine.price %></td>
-    <td></td>
+    <td><img src="/assets/btn_info.gif"></td>
   </tr>
 <% end %>
 </table>  
+
+<p>+ Unverbindliche Preisempfehlung des Herstellers, zzgl. Überführungs- und Zulassungskosten.</p>
+
+<p>**Die angegebenen Werte wurden nach den vorgeschriebenen Messverfahren (§ 2 Nrn. 5, 6, 6 a Pkw-EnVKV in der jeweils geltenden Fassung) ermittelt. CO2-Emissionen, die durch die Produktion und Bereitstellung des Kraftstoffes bzw. anderer Energieträger entstehen, werden bei der Ermittlung der CO2-Emissionen gemäß der Richtlinie 1999/94/EG nicht berücksichtigt. Die Angaben beziehen sich nicht auf ein einzelnes Fahrzeug und sind nicht Bestandteil des Angebotes, sondern dienen allein Vergleichszwecken zwischen den verschiedenen Fahrzeugtypen. Der Kraftstoffverbrauch und die CO2-Emissionen eines Fahrzeugs hängen nicht nur von der effizienten Ausnutzung des Kraftstoffs durch das Fahrzeug ab, sondern werden auch vom Fahrverhalten und anderen nichttechnischen Faktoren beeinflusst. CO2 ist das für die Erderwärmung hauptsächlich verantwortliche Treibhausgas.
+Hinweis nach Richtlinie 1999/94/EG in der jeweils gegenwärtig geltenden Fassung: Weitere Informationen zum offiziellen Kraftstoffverbrauch und den offiziellen spezifischen CO2-Emissionen neuer Personenkraftwagen können dem "Leitfaden über den Kraftstoffverbrauch, die CO2-Emissionen und den Stromverbrauch neuer Personenkraftwagen" entnommen werden, der an allen Verkaufsstellen und bei der DAT Deutsche Automobil Treuhand GmbH, Helmuth-Hirth-Straße 1, D-73760 Ostfildern oder unter www.dat.de unentgeltlich erhältlich ist. </p>
+
+<p>Effizienzklassen bewerten Fahrzeuge anhand der CO2-Emissionen unter Berücksichtigung des Fahrzeugleergewichts. Fahrzeuge, die dem Durchschnitt entsprechen, werden mit D eingestuft. Fahrzeuge, die besser sind als der heutige Durchschnitt werden mit A+, A, B oder C eingestuft. Fahrzeuge, die schlechter als der Durchschnitt sind, werden mit E, F oder G beschrieben.</p>

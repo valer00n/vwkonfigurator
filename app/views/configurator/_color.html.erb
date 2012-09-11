@@ -1,17 +1,13 @@
 <div width="45%">
   <table>
     <tr>
-      <th></th>
-      <th>Name</th>
-      <th>Image</th>
-      <th>Price</th>
+      <th>Außenlackierung</th>
+      <th>Preis+</th>
     </tr>
 
   <% @car_colors.each do |car_color| %>
     <tr>
-      <td></td>
-      <td><%= car_color.image %></td>
-      <td><%= car_color.name %></td>
+      <td><%= radio_button("car_color", "color", "rails") %> <%= image_tag car_color.image.html_safe %> <%= car_color.name %></td>
       <td><%= car_color.price %></td>
     </tr>
   <% end %>
@@ -21,16 +17,13 @@
 <div width="45%">
   <table>
     <tr>
-      <th></th>
-      <th>Name</th>
-      <th>Image</th>
-      <th>Description</th>
+      <th>Innenausstattung</th>
+      <th>Preis+</th>
     </tr>
 
   <% @car_interior_colors.each do |car_interior_color| %>
     <tr>
-      <td><%= car_interior_color.name %></td>
-      <td><%= car_interior_color.image %></td>
+      <td><%= image_tag car_interior_color.image.html_safe %> <%= car_interior_color.name %></td>
       <td><%= car_interior_color.description %></td>
     </tr>
   <% end %>

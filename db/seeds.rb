@@ -141,3 +141,12 @@ CarOption.create!(name: 'Soundsystem "DYNAUDIO Confidence"', price: 1520.00, cat
 CarOption.create!(name: 'Raucherausführung: Aschenbecher inkl. Zigarettenanzünder in der Mittelkonsole, 2 Ascher in den Türen hinten', price: 20.00, category: 'Raucherausführung')
 
 CarOption.create!(name: 'Reifenfülldruck-Kontrollsystem', price: 365.00, category: 'Räder / Reifen')
+
+CarEngine.create!(name: '3.6 V6 BlueMotion Technology', power: '206 kW', transmision: '8-Gang-Automatik', acceleration: '9,9 l/100km', standart: '236 g/km / E', price: 51275.00)
+
+CarEngine.create!(name: '3.0 V6 BlueMotion Technology', power: '150 kW', transmision: '8-Gang-Automatik', acceleration: '7.0 l/100km', standart: '184 g/km / B', price: 49625.00)
+
+CarEngine.create!(name: '3.0 V6 BlueMotion Technology', power: '180 kW', transmision: '8-Gang-Automatik', acceleration: '7.2 l/100km', standart: '184 g/km / B', price: 52375.00)
+
+CarColor.create!(name: 'Schwarz', image: 'http://cc5.volkswagen.de/cc5/images/render/30100/a5e43fca_46_36.png', price: 0.00)
+CarColor.create!(name: 'Super Puper Schwarz', image: 'http://cc5.volkswagen.de/cc5/images/render/30100/a5e43fca_46_36.png', price: 10000.00)

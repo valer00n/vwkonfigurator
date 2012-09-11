@@ -13,7 +13,7 @@ class CarGroupsController < ApplicationController
   # GET /car_groups/1
   # GET /car_groups/1.json
   def show
-    @car_group = CarGroup.find(params[:id])
+    @car_group = CarGroup.find_by_token(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
