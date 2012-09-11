@@ -7,6 +7,7 @@ gem 'compass'
 
 # libs
 gem 'jquery-rails'
+gem 'jquery-ui-themes'
 gem "ember-rails"
 
 # assets for precompile

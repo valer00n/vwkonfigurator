@@ -16,6 +16,7 @@ class ConfiguratorController < ApplicationController
   end
 
   def engine
+    @car_engines = CarEngine.all
     render :partial => 'engine'
   end
 

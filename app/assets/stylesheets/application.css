@@ -12,6 +12,7 @@
  *= require 960_16_col
  *= require vw
  *= require vag_fonts
+ *= require jquery-ui/smoothness
  */
 
 div.container_16 {
@@ -62,9 +63,13 @@ ul.nav li{
   margin: 0 auto;
 }
 
-#header, #canvas, #navbar, #form, #footer {
+#header, #canvas, #form, #footer {
   display: block;
   padding: 1em 0;
+}
+
+#navbar {
+  display: block;
 }
 
 #canvas-wrapper {
