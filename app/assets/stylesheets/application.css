@@ -146,9 +146,15 @@ td {
 }
 
 
-#engine, #color, #config, #total, #overview {
+#engine, #color, #config, #total{
   height: 186px;
   max-height: 186px;
+  overflow: auto;
+}
+
+#overview {
+  height: 256px;
+  max-height: 256px;
   overflow: auto;
 }
 
