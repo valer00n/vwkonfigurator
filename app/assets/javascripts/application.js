@@ -78,6 +78,10 @@ $(document).ready(function(){
     
   });  
 
+  $('.car_ops').live('click', function(){
+    Vwkonfigurator.appController.calculateRight();
+  });
+
 });
 
 //application globals
@@ -118,6 +122,7 @@ Vwkonfigurator.carOptionsController = Vwkonfigurator.CarOptionsController.create
 });
 
 
+//preload data
 Vwkonfigurator.carModels = Vwkonfigurator.carModelsController.findAll();
 Vwkonfigurator.carTrims = Vwkonfigurator.carTrimsController.findAll();
 
@@ -126,6 +131,7 @@ Vwkonfigurator.carColors = Vwkonfigurator.carColorsController.findAll();
 Vwkonfigurator.carInteriorColors = Vwkonfigurator.carInteriorColorsController.findAll();
 Vwkonfigurator.carOptions = Vwkonfigurator.carOptionsController.findAll();
 
+Vwkonfigurator.appController = Vwkonfigurator.ApplicationController.create();
 
 Vwkonfigurator.hashLocation = Ember.HashLocation.create({});
 

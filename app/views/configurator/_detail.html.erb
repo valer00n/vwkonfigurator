@@ -20,19 +20,36 @@
     </div>  
   </div>
 </div>
-<div class="grid_4">
-<h4>Der Touareg</h4>
-<p>Touareg V6 BlueMotion Technology 3,6 l 206 kW (280 PS) 8-Gang-Automatik (Tiptronic)</p>
-<p>51275,00</p>
-<h4>Außenlackierung</h4>
-  <p><a href="#color">bitte auswählen</a></p>
-<h4>Innenausstattung</h4>
-  <p><a href="#color">bitte auswählen</a></p>
-<h4>Sonderausstattung</h4>
-  <p><a href="#config">bitte auswählen</a></p>
 
+<div class="grid_4">
+<div id="overview">
+  <h4>Der Touareg</h4>
+
+  <div id="engine_str">&nbsp;</div>
+
+  <div id="price_str">&nbsp;</div>
+
+  <h4>Außenlackierung</h4>
+    <div id="color_str">
+      &nbsp;
+    </div>
+  <h4>Innenausstattung</h4>
+    <div id="interior_str">
+      &nbsp;
+    </div>
+  <h4>Sonderausstattung</h4>
+    <div id="option_str">
+      &nbsp;
+    </div>
+
+    <div id="total_str">
+      &nbsp;
+    </div>
+  </div>
 </div>
 
 <script type="text/javascript">
   $('#tabs').tabs();
+
+  Vwkonfigurator.appController.calculateRight();
 </script>

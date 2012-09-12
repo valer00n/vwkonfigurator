@@ -5,10 +5,10 @@
       <th>Preis+</th>
     </tr>
 
-  <% @car_colors.each do |car_color| %>
   <% first = 0 %>
+  <% @car_colors.each do |car_color| %>
     <tr>
-      <td><%= radio_button("car_color", "color", car_color.token, :checked => (first == 0)) %> <%= image_tag car_color.image.html_safe %> <%= car_color.name %></td>
+      <td><%= radio_button("car_color", "color", car_color.token, :checked => (first == 0), :class => 'car_color_ops  car_ops') %> <%= image_tag car_color.image.html_safe %> <%= car_color.name %></td>
       <td><%= car_color.price %></td>
     </tr>
   <% first += 1 %>
@@ -22,11 +22,11 @@
       <th>Innenausstattung</th>
       <th>Preis+</th>
     </tr>
-
-  <% @car_interior_colors.each do |car_interior_color| %>
+  
   <% first = 0 %>
+  <% @car_interior_colors.each do |car_interior_color| %>
     <tr>
-      <td><%= radio_button("car_interior_color", "interior_color", car_interior_color.token, :checked => (first == 0)) %> <%= image_tag car_interior_color.image.html_safe %> <%= car_interior_color.name %></td>
+      <td><%= radio_button("car_interior_color", "interior_color", car_interior_color.token, :checked => (first == 0), :class => 'car_interior_color_ops  car_ops') %> <%= image_tag car_interior_color.image.html_safe %> <%= car_interior_color.name %></td>
       <td><%= car_interior_color.description.html_safe %></td>
     </tr>
     <% first += 1 %>
