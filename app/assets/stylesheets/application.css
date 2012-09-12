@@ -76,6 +76,23 @@ ul.nav li{
   /*background: #CCCCD1;*/
 }
 
+.double-panel {
+  width: 48%;
+  float: left;
+}
+
+.double-panel table {
+  width: 100%;
+}
+
+th {
+  background: #CCCCD1;
+}
+
+td {
+  border-bottom: solid 1px #CCCCD1;
+} 
+
 #canvas {
   height: 260px;
   background: left center no-repeat url("/assets/default_media_stage.jpg");
@@ -114,6 +131,10 @@ ul.nav li{
 
 #tabs {
   overflow: auto;
+}
+
+#tabs li {
+  width: 24%;
 }
 
 #tabs li span{

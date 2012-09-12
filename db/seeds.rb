@@ -148,5 +148,8 @@ CarEngine.create!(name: '3.0 V6 BlueMotion Technology', power: '150 kW', transmi
 
 CarEngine.create!(name: '3.0 V6 BlueMotion Technology', power: '180 kW', transmision: '8-Gang-Automatik', acceleration: '7.2 l/100km', standart: '184 g/km / B', price: 52375.00)
 
-CarColor.create!(name: 'Schwarz', image: 'http://cc5.volkswagen.de/cc5/images/render/30100/a5e43fca_46_36.png', price: 0.00)
-CarColor.create!(name: 'Super Puper Schwarz', image: 'http://cc5.volkswagen.de/cc5/images/render/30100/a5e43fca_46_36.png', price: 10000.00)
+CarColor.create!(name: 'Schwarz', image: '/attaches/models/a5e43fca_46_36.png', price: 0.00)
+CarColor.create!(name: 'Deep Black Perleffekt', image: '/attaches/models/a5e43fca_46_36.png', price: 5420.00)
+
+CarInteriorColor.create!(name: 'First color', image: '/attaches/models/517f1a39_46_36.png', description: 'Sitze Corn Silk Beige<br>Instrumententafel Naturbraun-Corn Silk Beige</br>Teppich Corn Silk Beige<br>Himmel  Corn Silk Beige<br>ggf. aufpreispflichtig')
+CarInteriorColor.create!(name: 'Second Color Premium', image: '/attaches/models/517f1a39_46_36.png', description: 'Sitze  Dark Burgundy-Titanschwarz<br>Instrumententafel Titanschwarz<br>Teppich Titanschwarz<br>Himmel  Titanschwarz<br>ggf. aufpreispflichtig')

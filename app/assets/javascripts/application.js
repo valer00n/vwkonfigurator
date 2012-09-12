@@ -82,30 +82,52 @@ $(document).ready(function(){
 
 //application globals
 Vwkonfigurator.carModelsController = Vwkonfigurator.CarModelsController.create({
-  loadAll: function(data) {
-    this.findAll();
-  },
-
   findAll: function() {
     this.set('content', Vwkonfigurator.store.findAll(Vwkonfigurator.CarModel));
   }
 });
 
 Vwkonfigurator.carTrimsController = Vwkonfigurator.CarTrimsController.create({
-  loadAll: function(data) {
-    this.findAll();
-  },
-
   findAll: function() {
     this.set('content', Vwkonfigurator.store.findAll(Vwkonfigurator.CarTrim));
   }
 });
 
+Vwkonfigurator.carEnginesController = Vwkonfigurator.CarEnginesController.create({
+  findAll: function() {
+    this.set('content', Vwkonfigurator.store.findAll(Vwkonfigurator.CarEngine));
+  }
+});
+
+Vwkonfigurator.carColorsController = Vwkonfigurator.CarColorsController.create({
+  findAll: function() {
+    this.set('content', Vwkonfigurator.store.findAll(Vwkonfigurator.CarColor));
+  }
+});
+
+Vwkonfigurator.carInteriorColorsController = Vwkonfigurator.CarInteriorColorsController.create({
+  findAll: function() {
+    this.set('content', Vwkonfigurator.store.findAll(Vwkonfigurator.CarInteriorColor));
+  }
+});
+
+Vwkonfigurator.carOptionsController = Vwkonfigurator.CarOptionsController.create({
+  findAll: function() {
+    this.set('content', Vwkonfigurator.store.findAll(Vwkonfigurator.CarOption));
+  }
+});
+
+
 Vwkonfigurator.carModels = Vwkonfigurator.carModelsController.findAll();
 Vwkonfigurator.carTrims = Vwkonfigurator.carTrimsController.findAll();
 
-Vwkonfigurator.hashLocation = Ember.HashLocation.create({  
-});
+Vwkonfigurator.carEngines = Vwkonfigurator.carEnginesController.findAll();
+Vwkonfigurator.carColors = Vwkonfigurator.carColorsController.findAll();
+Vwkonfigurator.carInteriorColors = Vwkonfigurator.carInteriorColorsController.findAll();
+Vwkonfigurator.carOptions = Vwkonfigurator.carOptionsController.findAll();
+
+
+Vwkonfigurator.hashLocation = Ember.HashLocation.create({});
 
 Vwkonfigurator.currentCarModel = null;
 Vwkonfigurator.currentCarTrim = null;

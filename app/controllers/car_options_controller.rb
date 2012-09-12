@@ -17,7 +17,7 @@ class CarOptionsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @car_option }
+      format.json { render json: {car_option: @car_option} }
     end
   end
 

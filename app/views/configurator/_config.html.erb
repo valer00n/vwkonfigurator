@@ -6,7 +6,7 @@
 
 <% @car_options.each do |car_option| %>
   <tr>
-    <td><%= check_box("car_option", "car_option") %><%= car_option.name %></td>
+    <td><%= check_box("car_option", "car_option", checked_value: car_option.token) %><%= car_option.name %></td>
     <td><%= car_option.price %></td>
   </tr>
 <% end %>

@@ -17,7 +17,7 @@ class CarInteriorColorsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @car_interior_color }
+      format.json { render json: {car_interior_color: @car_interior_color} }
     end
   end
 
