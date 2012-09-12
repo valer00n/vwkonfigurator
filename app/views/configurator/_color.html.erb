@@ -26,7 +26,7 @@
   <% @car_interior_colors.each do |car_interior_color| %>
   <% first = 0 %>
     <tr>
-      <td><%= radio_button("car_interior_color", "color", car_interior_color.token, :checked => (first == 0)) %> <%= image_tag car_interior_color.image.html_safe %> <%= car_interior_color.name %></td>
+      <td><%= radio_button("car_interior_color", "interior_color", car_interior_color.token, :checked => (first == 0)) %> <%= image_tag car_interior_color.image.html_safe %> <%= car_interior_color.name %></td>
       <td><%= car_interior_color.description.html_safe %></td>
     </tr>
     <% first += 1 %>

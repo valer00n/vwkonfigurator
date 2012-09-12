@@ -13,7 +13,7 @@
 
 <% @car_engines.each do |car_engine| %>
   <tr>
-    <td><%= radio_button("car_color", "color", car_engine.token, :checked => (first == 0)) %> <%= car_engine.name %></td>
+    <td><%= radio_button("car_engine", "engine", car_engine.token, :checked => (first == 0)) %> <%= car_engine.name %></td>
     <td><%= car_engine.power %></td>
     <td><%= car_engine.transmision %></td>
     <td><%= car_engine.acceleration %></td>
